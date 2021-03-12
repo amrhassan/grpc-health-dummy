@@ -1,0 +1,15 @@
+[package]
+name = "grpc-health-dummy"
+version = "0.0.0"
+description = "gRPC server implementing only the Health service"
+authors = ["Amr Hassan <amr.hassan@gmail.com>"]
+edition = "2018"
+build = "build.rs"
+
+[build-dependencies]
+tonic-build = { version = "0.4", features = ["prost"] }
+
+[dependencies]
+tonic = "0.4"
+tokio = { version = "1", features = ["rt-multi-thread"] }
+prost = "0.7"
