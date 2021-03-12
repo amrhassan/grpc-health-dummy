@@ -11,7 +11,7 @@ use pb::{HealthCheckRequest, HealthCheckResponse};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
-    let addr = ":50051".parse()?;
+    let addr = "0.0.0.0:50051".parse()?;
 
     Server::builder()
         .add_service(HealthServer::new(HealthServiceImpl::default()))
